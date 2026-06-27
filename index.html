@@ -1,0 +1,2024 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Костёр — шашлык и шаурма на углях в Орске 🔥</title>
+    <meta name="description" content="Шашлык и шаурма на углях в Орске. Доставка, уютное кафе. Сочное мясо, дымный аромат. Заказывайте в Костёр!" />
+    <meta name="keywords" content="шаурма Орск, шашлык Орск, костер шаурма, шаурма на углях, доставка шаурмы Орск, кафе Орск, люля-кебаб Орск" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Кафе Костёр" />
+    <link rel="canonical" href="https://kosterorsk.ru" />
+
+    <meta property="og:title" content="Костёр — шашлык и шаурма на углях в Орске" />
+    <meta property="og:description" content="Сочный шашлык, ароматная шаурма, люля-кебаб. Готовим с душой — кормим вкусно! 🔥" />
+    <meta property="og:image" content="https://kosterorsk.ru/og-image.jpg" />
+    <meta property="og:url" content="https://kosterorsk.ru" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Костёр",
+        "description": "Шашлык и шаурма на углях в Орске",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Чернышева, 16",
+            "addressLocality": "Орск",
+            "addressCountry": "RU"
+        },
+        "telephone": "+7 (922) 530-61-61",
+        "servesCuisine": "Шашлык, шаурма, люля-кебаб",
+        "priceRange": "₽₽"
+    }
+    </script>
+
+    <style>
+        /* ============================================
+                   БАЗОВЫЕ НАСТРОЙКИ
+                   ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --red: #dc3545;
+            --red-light: #ff4d5a;
+            --red-dark: #b02a37;
+            --red-glow: rgba(220, 53, 69, 0.15);
+            --green: #28a745;
+            --green-light: #34ce57;
+            --green-glow: rgba(40, 167, 69, 0.2);
+            --telegram: #0088cc;
+            --telegram-light: #00a3e0;
+            --telegram-glow: rgba(0, 136, 204, 0.2);
+            --white: #ffffff;
+            --white-dark: #f8f9fa;
+            --gray: #6c757d;
+            --gray-light: #e9ecef;
+            --gray-dark: #343a40;
+            --text: #212529;
+            --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background: var(--white);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ============================================
+                   ПРОГРЕСС-БАР
+                   ============================================ */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--red);
+            z-index: 10000;
+            width: 0%;
+            transition: width 0.1s;
+            box-shadow: 0 0 20px var(--red-glow);
+        }
+
+        /* ============================================
+                   НАВИГАЦИЯ С АВАТАРКОЙ
+                   ============================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            padding: 18px 40px;
+            background: var(--white);
+            border-bottom: 2px solid var(--gray-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .navbar.scrolled {
+            padding: 12px 40px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text);
+            font-size: 1.6rem;
+            font-weight: 900;
+        }
+
+        .navbar .logo .logo-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--red);
+            flex-shrink: 0;
+        }
+
+        .navbar .logo .logo-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .navbar .logo .logo-text {
+            color: var(--red);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--red);
+        }
+
+        .nav-links .btn-order {
+            background: var(--red);
+            color: var(--white);
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links .btn-order:hover {
+            background: var(--red-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px var(--red-glow);
+        }
+
+        .cart-btn {
+            position: relative;
+            background: transparent;
+            border: none;
+            color: var(--text);
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: var(--transition);
+            padding: 5px;
+        }
+
+        .cart-btn:hover {
+            color: var(--red);
+            transform: scale(1.1);
+        }
+
+        .cart-btn .badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--red);
+            color: var(--white);
+            font-size: 0.6rem;
+            font-weight: 700;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 2px;
+            background: var(--text);
+            transition: var(--transition);
+        }
+
+        /* ============================================
+                   ГЕРОЙ
+                   ============================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 30px 80px;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(220, 53, 69, 0.03) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1200px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-photo {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 1 / 1;
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 0 auto;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            border: 2px solid var(--gray-light);
+        }
+
+        .hero-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .hero-photo .glow-left,
+        .hero-photo .glow-right {
+            position: absolute;
+            top: 0;
+            width: 35%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .hero-photo .glow-left {
+            left: 0;
+            background: linear-gradient(90deg, rgba(220, 53, 69, 0.12) 0%, transparent 100%);
+            border-radius: 14px 0 0 14px;
+        }
+
+        .hero-photo .glow-right {
+            right: 0;
+            background: linear-gradient(270deg, rgba(220, 53, 69, 0.12) 0%, transparent 100%);
+            border-radius: 0 14px 14px 0;
+        }
+
+        .hero-photo:hover .glow-left,
+        .hero-photo:hover .glow-right {
+            opacity: 1;
+        }
+
+        .hero-photo:hover {
+            transform: scale(1.01);
+            border-color: var(--red);
+            box-shadow: 0 0 50px rgba(220, 53, 69, 0.08), 0 20px 60px rgba(0, 0, 0, 0.08);
+        }
+
+        .hero-photo .corner {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border: 2px solid rgba(220, 53, 69, 0.2);
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .hero-photo .corner-tl {
+            top: 15px;
+            left: 15px;
+            border-right: none;
+            border-bottom: none;
+            border-radius: 4px 0 0 0;
+        }
+        .hero-photo .corner-tr {
+            top: 15px;
+            right: 15px;
+            border-left: none;
+            border-bottom: none;
+            border-radius: 0 4px 0 0;
+        }
+        .hero-photo .corner-bl {
+            bottom: 15px;
+            left: 15px;
+            border-right: none;
+            border-top: none;
+            border-radius: 0 0 0 4px;
+        }
+        .hero-photo .corner-br {
+            bottom: 15px;
+            right: 15px;
+            border-left: none;
+            border-top: none;
+            border-radius: 0 0 4px 0;
+        }
+
+        .hero-photo:hover .corner {
+            border-color: var(--red);
+            width: 35px;
+            height: 35px;
+        }
+
+        .hero-text {
+            text-align: left;
+        }
+
+        .hero-text .badge {
+            display: inline-block;
+            padding: 6px 20px;
+            border: 2px solid var(--red);
+            border-radius: 50px;
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--red);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(2.8rem, 7vw, 4.5rem);
+            font-weight: 900;
+            color: var(--text);
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h1 .red {
+            color: var(--red);
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .hero-text .divider {
+            width: 60px;
+            height: 3px;
+            background: var(--red);
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        /* ============================================
+                   КНОПКИ
+                   ============================================ */
+        .btn-red {
+            display: inline-block;
+            padding: 16px 40px;
+            background: var(--red);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 50px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .btn-red:hover {
+            background: var(--red-light);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px var(--red-glow);
+        }
+
+        .btn-red:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .btn-red-outline {
+            background: transparent;
+            color: var(--red);
+            border: 2px solid var(--red);
+        }
+
+        .btn-red-outline:hover {
+            background: var(--red);
+            color: var(--white);
+        }
+
+        .btn-green {
+            display: inline-block;
+            padding: 16px 40px;
+            background: var(--green);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 50px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .btn-green:hover {
+            background: var(--green-light);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px var(--green-glow);
+        }
+
+        .btn-green:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .btn-telegram {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 40px;
+            background: var(--telegram);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 50px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .btn-telegram:hover {
+            background: var(--telegram-light);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px var(--telegram-glow);
+        }
+
+        .btn-telegram .icon {
+            font-size: 1.4rem;
+        }
+
+        /* ============================================
+                   СТРЕЛКА ВНИЗ
+                   ============================================ */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            opacity: 0.4;
+            transition: var(--transition);
+            animation: floatDown 2.8s ease-in-out infinite;
+        }
+
+        .scroll-indicator:hover {
+            opacity: 0.8;
+        }
+
+        .scroll-indicator .line {
+            width: 2px;
+            height: 40px;
+            background: linear-gradient(180deg, var(--red), transparent);
+        }
+
+        .scroll-indicator .arrow {
+            width: 20px;
+            height: 20px;
+            border-bottom: 2px solid var(--red);
+            border-right: 2px solid var(--red);
+            transform: rotate(45deg);
+        }
+
+        @keyframes floatDown {
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(8px);
+            }
+        }
+
+        /* ============================================
+                   АНИМАЦИИ ПРИ СКРОЛЛЕ
+                   ============================================ */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .menu-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .menu-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .menu-item:nth-child(1) { transition-delay: 0.05s; }
+        .menu-item:nth-child(2) { transition-delay: 0.10s; }
+        .menu-item:nth-child(3) { transition-delay: 0.15s; }
+        .menu-item:nth-child(4) { transition-delay: 0.20s; }
+        .menu-item:nth-child(5) { transition-delay: 0.25s; }
+        .menu-item:nth-child(6) { transition-delay: 0.30s; }
+        .menu-item:nth-child(7) { transition-delay: 0.35s; }
+        .menu-item:nth-child(8) { transition-delay: 0.40s; }
+
+        /* ============================================
+                   СЕКЦИИ
+                   ============================================ */
+        section {
+            padding: 80px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header .label {
+            color: var(--red);
+            font-size: 0.8rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--text);
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .section-header .divider {
+            width: 50px;
+            height: 3px;
+            background: var(--red);
+            margin: 0 auto 15px;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* ============================================
+                   МЕНЮ
+                   ============================================ */
+        .menu-category {
+            margin-bottom: 50px;
+        }
+
+        .menu-category h3 {
+            font-size: 1.8rem;
+            color: var(--red);
+            margin-bottom: 20px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--gray-light);
+            padding-bottom: 10px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .menu-item {
+            background: var(--white);
+            padding: 18px 20px;
+            border-radius: 12px;
+            border: 2px solid var(--gray-light);
+            transition: var(--transition);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-item:hover {
+            border-color: var(--red);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px var(--red-glow);
+        }
+
+        .menu-item .info {
+            flex: 1;
+        }
+
+        .menu-item .info .name {
+            color: var(--text);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .menu-item .info .desc {
+            color: var(--gray);
+            font-size: 0.8rem;
+            margin-top: 2px;
+            display: none;
+        }
+
+        .menu-item .info .desc.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .menu-item .price {
+            color: var(--red);
+            font-size: 1.1rem;
+            font-weight: 700;
+            white-space: nowrap;
+            margin-left: 15px;
+        }
+
+        .menu-item .actions {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-left: 10px;
+        }
+
+        .btn-add-cart {
+            background: var(--red);
+            color: var(--white);
+            border: none;
+            padding: 4px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.7rem;
+            font-weight: 700;
+            transition: var(--transition);
+            font-family: 'Segoe UI', sans-serif;
+            white-space: nowrap;
+        }
+
+        .btn-add-cart:hover {
+            background: var(--red-light);
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px var(--red-glow);
+        }
+
+        .btn-toggle-desc {
+            background: transparent;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: var(--transition);
+            padding: 2px 8px;
+        }
+
+        .btn-toggle-desc:hover {
+            color: var(--red);
+        }
+
+        /* ============================================
+                   КОРЗИНА
+                   ============================================ */
+        .cart-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .cart-modal.open {
+            display: flex;
+        }
+
+        .cart-content {
+            background: var(--white);
+            border: 2px solid var(--red);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .cart-content .close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2rem;
+            color: var(--gray);
+            cursor: pointer;
+            transition: var(--transition);
+            background: none;
+            border: none;
+        }
+
+        .cart-content .close:hover {
+            color: var(--red);
+            transform: rotate(90deg);
+        }
+
+        .cart-content h2 {
+            color: var(--text);
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .cart-item .item-info .name {
+            color: var(--text);
+            font-size: 1rem;
+        }
+
+        .cart-item .item-info .qty {
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+
+        .cart-item .item-price {
+            color: var(--red);
+            font-weight: 700;
+            margin: 0 15px;
+        }
+
+        .cart-item .remove-btn {
+            background: transparent;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            padding: 0 5px;
+        }
+
+        .cart-item .remove-btn:hover {
+            color: var(--red);
+            transform: scale(1.2);
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            border-top: 2px solid var(--red);
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .cart-total .total-label {
+            color: var(--text);
+        }
+
+        .cart-total .total-price {
+            color: var(--red);
+        }
+
+        .cart-empty {
+            text-align: center;
+            color: var(--gray);
+            padding: 40px 0;
+        }
+
+        .cart-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cart-actions .btn-green {
+            flex: 1;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .cart-actions .btn-red {
+            flex: 1;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .cart-note {
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.75rem;
+            margin-top: 15px;
+            padding: 10px;
+            background: var(--white-dark);
+            border-radius: 8px;
+            border: 1px solid var(--gray-light);
+            line-height: 1.4;
+        }
+
+        .cart-note strong {
+            color: var(--red);
+        }
+
+        /* ============================================
+                   О КАФЕ
+                   ============================================ */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: var(--text);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .about-text p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .about-features .feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text);
+            font-size: 0.9rem;
+        }
+
+        .about-features .feature .icon {
+            color: var(--red);
+            font-size: 1.2rem;
+        }
+
+        .about-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+            border: 2px solid var(--gray-light);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ============================================
+                   КОНТАКТЫ
+                   ============================================ */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-map {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+            height: 400px;
+            border: 2px solid var(--gray-light);
+        }
+
+        .contact-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .contact-info .info-item {
+            display: flex;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .contact-info .info-item .icon {
+            font-size: 1.5rem;
+            color: var(--red);
+            min-width: 30px;
+        }
+
+        .contact-info .info-item .details .title {
+            color: var(--gray);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .contact-info .info-item .details .value {
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-top: 2px;
+        }
+
+        /* ============================================
+                   ФУТЕР
+                   ============================================ */
+        .footer {
+            background: var(--white-dark);
+            padding: 40px 30px;
+            text-align: center;
+            border-top: 2px solid var(--gray-light);
+            margin-top: 40px;
+        }
+
+        .footer .logo {
+            font-size: 1.6rem;
+            color: var(--red);
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .footer .logo span {
+            color: var(--text);
+            font-weight: 300;
+        }
+
+        .footer .copyright {
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+
+        /* ============================================
+                   АДАПТИВ
+                   ============================================ */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .hero-text .divider {
+                margin: 0 auto 30px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-photo {
+                max-width: 400px;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .navbar .logo {
+                font-size: 1.2rem;
+            }
+
+            .navbar .logo .logo-avatar {
+                width: 32px;
+                height: 32px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 30px 20px;
+                gap: 20px;
+                border-bottom: 2px solid var(--gray-light);
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 100px 20px 60px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-photo {
+                max-width: 320px;
+            }
+
+            .cart-content {
+                padding: 25px;
+                margin: 10px;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-map {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-photo {
+                max-width: 280px;
+            }
+
+            .hero-buttons .btn-red,
+            .hero-buttons .btn-telegram {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .menu-item {
+                flex-wrap: wrap;
+            }
+
+            .menu-item .price {
+                margin-left: 0;
+                width: 100%;
+                margin-top: 5px;
+            }
+
+            .menu-item .actions {
+                margin-left: 0;
+                width: 100%;
+                justify-content: flex-end;
+            }
+
+            .navbar .logo {
+                font-size: 1rem;
+            }
+
+            .navbar .logo .logo-avatar {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+    ПРОГРЕСС-БАР
+    ============================================ -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- ============================================
+    НАВИГАЦИЯ С АВАТАРКОЙ
+    ============================================ -->
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="logo">
+            <div class="logo-avatar">
+                <img src="/Users/torenb/Desktop/Костер бета/logo.png" alt="Костёр" />
+            </div>
+            <span class="logo-text">Костёр</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#menu">Меню</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+            <li><button class="btn-order" onclick="document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });">Заказать</button></li>
+        </ul>
+        <button class="cart-btn" onclick="toggleCart()">
+            🛒
+            <span class="badge" id="cartBadge">0</span>
+        </button>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- ============================================
+    ГЕРОЙ — ГЛАВНАЯ
+    ============================================ -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-photo fade-up">
+                <img src="/Users/torenb/Desktop/Костер бета/koster.png" alt="Кафе Костёр — шаурма и шашлык в Орске" />
+                <div class="glow-left"></div>
+                <div class="glow-right"></div>
+                <div class="corner corner-tl"></div>
+                <div class="corner corner-tr"></div>
+                <div class="corner corner-bl"></div>
+                <div class="corner corner-br"></div>
+            </div>
+
+            <div class="hero-text fade-up">
+                <div class="badge">🔥 Настоящий огонь</div>
+                <h1>КОСТЁР<br /><span class="red">шашлык & шаурма</span></h1>
+                <div class="divider"></div>
+                <p class="subtitle">
+                    Сочное мясо на углях, дымный аромат и уютная атмосфера.<br />
+                    Доставка по Орску.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn-red">Смотреть меню</a>
+                    <a href="tel:+79225306161" class="btn-red btn-red-outline">📞 Заказать</a>
+                    <a href="https://t.me/kosterorsk" target="_blank" class="btn-telegram">
+                        <span class="icon">✈️</span> Telegram
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator" onclick="document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });">
+            <div class="arrow"></div>
+            <div class="line"></div>
+        </div>
+    </section>
+
+    <!-- ============================================
+    МЕНЮ (полное)
+    ============================================ -->
+    <section id="menu">
+        <div class="section-header fade-up">
+            <div class="label">🔥 Меню</div>
+            <h2>Наши хиты</h2>
+            <div class="divider"></div>
+            <p>Нажмите на блюдо, чтобы увидеть описание</p>
+        </div>
+
+        <!-- Шаурма -->
+        <div class="menu-category fade-up">
+            <h3>🥙 Шаурма</h3>
+            <div class="menu-grid">
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Средняя (курица/свинина)</div>
+                        <div class="desc">Классическая шаурма с сочным мясом, овощами и соусом</div>
+                    </div>
+                    <div class="price">280₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Средняя шаурма', 280);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Большая (курица/свинина)</div>
+                        <div class="desc">Большая порция шаурмы с двойным мясом и свежими овощами</div>
+                    </div>
+                    <div class="price">340₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Большая шаурма', 340);">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Шашлык -->
+        <div class="menu-category fade-up">
+            <h3>🍖 Шашлык</h3>
+            <div class="menu-grid">
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Шашлык из свинины (шея)</div>
+                        <div class="desc">Нежная шея, маринованная по фирменному рецепту</div>
+                    </div>
+                    <div class="price">450₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Шашлык шея', 450);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Шашлык из свинины (мякоть)</div>
+                        <div class="desc">Сочная мякоть с золотистой корочкой</div>
+                    </div>
+                    <div class="price">440₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Шашлык мякоть', 440);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Шашлык из курицы (бедро)</div>
+                        <div class="desc">Нежное куриное бедро, маринованное в специях</div>
+                    </div>
+                    <div class="price">450₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Шашлык бедро', 450);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Шашлык из курицы (крылышки)</div>
+                        <div class="desc">Хрустящие крылышки с ароматным дымком</div>
+                    </div>
+                    <div class="price">350₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Шашлык крылышки', 350);">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Люля-кебаб -->
+        <div class="menu-category fade-up">
+            <h3>🥩 Люля-кебаб</h3>
+            <div class="menu-grid">
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Люля-кебаб (курица)</div>
+                        <div class="desc">Сочный люля из куриного фарша с пряностями</div>
+                    </div>
+                    <div class="price">430₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Люля курица', 430);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Люля-кебаб (телятина)</div>
+                        <div class="desc">Люля из телятины с луком и специями</div>
+                    </div>
+                    <div class="price">430₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Люля телятина', 430);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Люля-кебаб (свинина)</div>
+                        <div class="desc">Свиной люля с пряным ароматом</div>
+                    </div>
+                    <div class="price">430₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Люля свинина', 430);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Люля-кебаб в лаваше</div>
+                        <div class="desc">Люля, лаваш, фри, красный лук и соус</div>
+                    </div>
+                    <div class="price">490₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Люля в лаваше', 490);">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Салаты -->
+        <div class="menu-category fade-up">
+            <h3>🥗 Салаты</h3>
+            <div class="menu-grid">
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Витаминный салат</div>
+                        <div class="desc">Свежие овощи с зеленью (100г)</div>
+                    </div>
+                    <div class="price">100₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Витаминный салат', 100);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Летний салат</div>
+                        <div class="desc">Сезонные овощи и зелень (100г)</div>
+                    </div>
+                    <div class="price">100₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Летний салат', 100);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Соленья</div>
+                        <div class="desc">Домашние соленья (100г)</div>
+                    </div>
+                    <div class="price">100₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Соленья', 100);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Морковный салат</div>
+                        <div class="desc">Морковь по-корейски (100г)</div>
+                    </div>
+                    <div class="price">100₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Морковный салат', 100);">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Добавки -->
+        <div class="menu-category fade-up">
+            <h3>🧂 Добавки</h3>
+            <div class="menu-grid">
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Сыр</div>
+                        <div class="desc">Тёртый сыр для любого блюда</div>
+                    </div>
+                    <div class="price">50₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Сыр', 50);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Картофель фри</div>
+                        <div class="desc">Золотистый картофель фри</div>
+                    </div>
+                    <div class="price">50₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Картофель фри', 50);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Острый соус</div>
+                        <div class="desc">Пикантный соус для любителей острого</div>
+                    </div>
+                    <div class="price">35₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Острый соус', 35);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Барбекю соус</div>
+                        <div class="desc">Дымный соус барбекю</div>
+                    </div>
+                    <div class="price">50₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Барбекю соус', 50);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Терияки соус</div>
+                        <div class="desc">Сладковатый соус терияки</div>
+                    </div>
+                    <div class="price">50₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Терияки соус', 50);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Пепперони</div>
+                        <div class="desc">Пикантные колбаски пепперони</div>
+                    </div>
+                    <div class="price">60₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Пепперони', 60);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Бекон</div>
+                        <div class="desc">Хрустящие ломтики бекона</div>
+                    </div>
+                    <div class="price">60₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Бекон', 60);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Халапеньо</div>
+                        <div class="desc">Острые перцы халапеньо</div>
+                    </div>
+                    <div class="price">40₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Халапеньо', 40);">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- К мясу -->
+        <div class="menu-category fade-up">
+            <h3>🔥 К мясу</h3>
+            <div class="menu-grid">
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Грибы на углях</div>
+                        <div class="desc">5 шт. шампиньонов, запечённых на углях</div>
+                    </div>
+                    <div class="price">290₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Грибы на углях', 290);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Картофель на углях</div>
+                        <div class="desc">5 шт. картофеля, запечённого на углях</div>
+                    </div>
+                    <div class="price">200₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Картофель на углях', 200);">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Снеки -->
+        <div class="menu-category fade-up">
+            <h3>🍟 Снеки</h3>
+            <div class="menu-grid">
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Фри + соус</div>
+                        <div class="desc">Картофель фри с соусом на выбор</div>
+                    </div>
+                    <div class="price">200₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Фри + соус', 200);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Картофель по-деревенски</div>
+                        <div class="desc">Картофель с кожурой и специями</div>
+                    </div>
+                    <div class="price">230₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Картофель по-деревенски', 230);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Луковые кольца</div>
+                        <div class="desc">6 шт. хрустящих луковых колец</div>
+                    </div>
+                    <div class="price">250₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Луковые кольца', 250);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Наггетсы (6 шт)</div>
+                        <div class="desc">Хрустящие куриные наггетсы</div>
+                    </div>
+                    <div class="price">170₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Наггетсы 6 шт', 170);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Наггетсы (9 шт)</div>
+                        <div class="desc">Хрустящие куриные наггетсы</div>
+                    </div>
+                    <div class="price">230₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Наггетсы 9 шт', 230);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Наггетсы (12 шт)</div>
+                        <div class="desc">Хрустящие куриные наггетсы</div>
+                    </div>
+                    <div class="price">250₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Наггетсы 12 шт', 250);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Сырные палочки (6 шт)</div>
+                        <div class="desc">Хрустящие сырные палочки</div>
+                    </div>
+                    <div class="price">200₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Сырные палочки 6 шт', 200);">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleDesc(this)">
+                    <div class="info">
+                        <div class="name">Сырные палочки (10 шт)</div>
+                        <div class="desc">Хрустящие сырные палочки</div>
+                    </div>
+                    <div class="price">240₽</div>
+                    <div class="actions">
+                        <button class="btn-toggle-desc" onclick="event.stopPropagation(); toggleDesc(this.closest('.menu-item'));">▼</button>
+                        <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('Сырные палочки 10 шт', 240);">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+    О КАФЕ
+    ============================================ -->
+    <section id="about">
+        <div class="section-header fade-up">
+            <div class="label">🔥 О нас</div>
+            <h2>Кафе Костёр</h2>
+            <div class="divider"></div>
+            <p>Шашлык и шаурма на настоящих углях в Орске</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-text fade-up">
+                <h3>Настоящий вкус с огоньком</h3>
+                <p>
+                    <strong>Кафе «Костёр»</strong> — это место, где собираются ценители
+                    настоящего мяса на углях. Мы готовим шашлык и шаурму по
+                    традиционным рецептам с добавлением авторских ноток.
+                </p>
+                <p>
+                    Все блюда готовятся на открытом огне, что придаёт им
+                    неповторимый дымный аромат и сочность. Мы используем
+                    только свежее мясо и натуральные специи.
+                </p>
+                <div class="about-features">
+                    <div class="feature"><span class="icon">🔥</span> Мясо на углях</div>
+                    <div class="feature"><span class="icon">🌿</span> Натуральные специи</div>
+                    <div class="feature"><span class="icon">🏠</span> Уютная атмосфера</div>
+                    <div class="feature"><span class="icon">🚀</span> Быстрая доставка</div>
+                </div>
+            </div>
+            <div class="about-image fade-up">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop" alt="Атмосфера кафе Костёр в Орске" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+    КОНТАКТЫ
+    ============================================ -->
+    <section id="contacts">
+        <div class="section-header fade-up">
+            <div class="label">📍 Контакты</div>
+            <h2>Свяжитесь с нами</h2>
+            <div class="divider"></div>
+            <p>Закажите доставку или забронируйте столик</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-map fade-up">
+                <iframe 
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A8e2f4a3b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f&amp;source=constructor"
+                    width="100%" 
+                    height="400" 
+                    frameborder="0"
+                    allowfullscreen="true">
+                </iframe>
+            </div>
+            <div class="contact-info fade-up">
+                <div class="info-item">
+                    <div class="icon">📍</div>
+                    <div class="details">
+                        <div class="title">Адрес</div>
+                        <div class="value">г. Орск, ул. Чернышева, 16</div>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon">📞</div>
+                    <div class="details">
+                        <div class="title">Телефон</div>
+                        <div class="value"><a href="tel:+79225306161" style="color:var(--text);text-decoration:none;">8 (922) 530-61-61</a></div>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon">🕐</div>
+                    <div class="details">
+                        <div class="title">Часы работы</div>
+                        <div class="value">Ежедневно: 11:00 — 23:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+    ФУТЕР
+    ============================================ -->
+    <footer class="footer">
+        <div class="logo">Костёр</div>
+        <p class="copyright">© 2026 — шашлык и шаурма на углях в Орске</p>
+        <p class="copyright" style="margin-top:6px;font-size:0.75rem;">
+            <a href="https://t.me/kosterorsk" target="_blank" style="color:var(--red);text-decoration:none;">✈️ Мы в Telegram</a>
+        </p>
+    </footer>
+
+    <!-- ============================================
+    КОРЗИНА
+    ============================================ -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <button class="close" onclick="toggleCart()">✕</button>
+            <h2>🛒 Ваш заказ</h2>
+            <div id="cartItems">
+                <div class="cart-empty">Корзина пуста</div>
+            </div>
+            <div class="cart-total" id="cartTotal" style="display:none;">
+                <span class="total-label">Итого:</span>
+                <span class="total-price" id="totalPrice">0 ₽</span>
+            </div>
+            <div class="cart-actions">
+                <button class="btn-red" onclick="clearCart()">Очистить</button>
+                <button class="btn-green" onclick="orderByPhone()">📞 Заказать по телефону</button>
+            </div>
+            <div class="cart-note">
+                ⚠️ <strong>Заказать можно только по телефону.</strong><br />
+                Корзина предназначена для примерной стоимости заказа.
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+    JAVASCRIPT
+    ============================================ -->
+    <script>
+        // ==========================================
+        // АНИМАЦИИ ПРИ СКРОЛЛЕ
+        // ==========================================
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-up, .menu-item');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, {
+                threshold: 0.15,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            fadeElements.forEach(el => observer.observe(el));
+        });
+
+        // ==========================================
+        // КОРЗИНА
+        // ==========================================
+        let cart = [];
+
+        function addToCart(name, price) {
+            const existing = cart.find(item => item.name === name);
+            if (existing) {
+                existing.qty++;
+            } else {
+                cart.push({ name, price, qty: 1 });
+            }
+            updateCartUI();
+            showNotification(`✅ ${name} добавлен!`);
+        }
+
+        function removeFromCart(name) {
+            const index = cart.findIndex(item => item.name === name);
+            if (index !== -1) {
+                if (cart[index].qty > 1) {
+                    cart[index].qty--;
+                } else {
+                    cart.splice(index, 1);
+                }
+            }
+            updateCartUI();
+        }
+
+        function clearCart() {
+            cart = [];
+            updateCartUI();
+            showNotification('🗑️ Корзина очищена');
+        }
+
+        function getTotal() {
+            return cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+        }
+
+        function updateCartUI() {
+            const badge = document.getElementById('cartBadge');
+            const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+            badge.textContent = totalItems;
+
+            const container = document.getElementById('cartItems');
+            const totalDiv = document.getElementById('cartTotal');
+            const totalPrice = document.getElementById('totalPrice');
+
+            if (cart.length === 0) {
+                container.innerHTML = '<div class="cart-empty">Корзина пуста</div>';
+                totalDiv.style.display = 'none';
+                return;
+            }
+
+            container.innerHTML = cart.map(item => `
+                        <div class="cart-item">
+                            <div class="item-info">
+                                <div class="name">${item.name}</div>
+                                <div class="qty">${item.qty} шт.</div>
+                            </div>
+                            <div class="item-price">${item.price * item.qty} ₽</div>
+                            <button class="remove-btn" onclick="removeFromCart('${item.name}')">✕</button>
+                        </div>
+                    `).join('');
+
+            totalDiv.style.display = 'flex';
+            totalPrice.textContent = getTotal() + ' ₽';
+        }
+
+        function toggleCart() {
+            document.getElementById('cartModal').classList.toggle('open');
+        }
+
+        function orderByPhone() {
+            if (cart.length === 0) {
+                showNotification('❌ Корзина пуста! Добавьте блюда.');
+                return;
+            }
+
+            const total = getTotal();
+            const items = cart.map(item => `${item.name} x${item.qty}`).join(', ');
+            const message = `Здравствуйте! Хочу заказать: ${items}. Итого: ${total}₽.`;
+
+            const phone = '79225306161';
+            const url = `tel:${phone}`;
+            window.location.href = url;
+
+            showNotification(`📞 Звоните по номеру 8 (922) 530-61-61\nВаш заказ: ${items}\nИтого: ${total}₽`);
+
+            console.log('📝 Заказ для звонка:', {
+                items: cart,
+                total: total,
+                time: new Date().toLocaleString()
+            });
+        }
+
+        function toggleDesc(element) {
+            const desc = element.querySelector('.desc');
+            desc.classList.toggle('show');
+        }
+
+        function showNotification(msg) {
+            const old = document.querySelector('.notification');
+            if (old) old.remove();
+
+            const div = document.createElement('div');
+            div.className = 'notification';
+            div.style.cssText = `
+                        position: fixed;
+                        bottom: 30px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: var(--white);
+                        border: 2px solid var(--red);
+                        color: var(--text);
+                        padding: 15px 30px;
+                        border-radius: 12px;
+                        z-index: 99999;
+                        font-weight: 600;
+                        box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+                        animation: slideUp 0.4s ease;
+                        max-width: 90%;
+                        text-align: center;
+                        white-space: pre-line;
+                    `;
+            div.textContent = msg;
+            document.body.appendChild(div);
+
+            setTimeout(() => {
+                div.style.opacity = '0';
+                div.style.transform = 'translateX(-50%) translateY(20px)';
+                setTimeout(() => div.remove(), 400);
+            }, 4000);
+        }
+
+        const style = document.createElement('style');
+        style.textContent = `
+                    @keyframes slideUp {
+                        0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+                        100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+                    }
+                `;
+        document.head.appendChild(style);
+
+        // ==========================================
+        // ПРОГРЕСС-БАР
+        // ==========================================
+        const progressBar = document.getElementById('progressBar');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            progressBar.style.width = (scrollTop / docHeight * 100) + '%';
+        });
+
+        // ==========================================
+        // НАВИГАЦИЯ
+        // ==========================================
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('open');
+        }
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('open');
+            });
+        });
+
+        // ==========================================
+        // ПЛАВНЫЙ СКРОЛЛ
+        // ==========================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        document.getElementById('cartModal').addEventListener('click', function(e) {
+            if (e.target === this) toggleCart();
+        });
+
+        console.log('🔥 Кафе Костёр — Орск, ул. Чернышева, 16');
+        console.log('📞 8 (922) 530-61-61');
+        console.log('✈️ Telegram: https://t.me/kosterorsk');
+    </script>
+
+</body>
+</html>
